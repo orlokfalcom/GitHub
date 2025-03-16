@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6bb3b9e1-daae-4f0e-b3b9-f1fde903008b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/GitHub" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/caça resultados/jogo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/certificados/GLOBAL MEETING UNINTER 2024 _ ODS 12 – ASSEGURAR PADRÕES DE PRODUÇÃO E DE CONSUMO SUSTENTÁVEIS 03 A 05.09.24-RONALDO LUIZ COUTINHO.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/certificados/PROGRAMA F5! _ BRASIL - FALANDO DE ESTADO LAICO 20.09.24-RONALDO LUIZ COUTINHO.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/certificados/PROGRAMA F5! _ BRASIL - UMA HISTÓRIA EM CONFLITO 06.09.24-RONALDO LUIZ COUTINHO.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/contato.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/portefolio.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/quem_sou.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/teste/teste.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TutsupMVC" beforeDir="false" afterPath="$PROJECT_DIR$/TutsupMVC" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TutsupMVC/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/TutsupMVC/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caelum-stella" beforeDir="false" afterPath="$PROJECT_DIR$/caelum-stella" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caelum-stella/stella-boleto/src/main/java/br/com/caelum/stella/boleto/Banco.java" beforeDir="false" afterPath="$PROJECT_DIR$/caelum-stella/stella-boleto/src/main/java/br/com/caelum/stella/boleto/Banco.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caelum-stella/stella-boleto/src/main/java/br/com/caelum/stella/boleto/Boleto.java" beforeDir="false" afterPath="$PROJECT_DIR$/caelum-stella/stella-boleto/src/main/java/br/com/caelum/stella/boleto/Boleto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caelum-stella/stella-boleto/src/main/java/br/com/caelum/stella/boleto/Datas.java" beforeDir="false" afterPath="$PROJECT_DIR$/caelum-stella/stella-boleto/src/main/java/br/com/caelum/stella/boleto/Datas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caelum-stella/stella-boleto/src/main/java/br/com/caelum/stella/boleto/Emissor.java" beforeDir="false" afterPath="$PROJECT_DIR$/caelum-stella/stella-boleto/src/main/java/br/com/caelum/stella/boleto/Emissor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caelum-stella/stella-boleto/src/main/java/br/com/caelum/stella/boleto/Pagador.java" beforeDir="false" afterPath="$PROJECT_DIR$/caelum-stella/stella-boleto/src/main/java/br/com/caelum/stella/boleto/Pagador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caelum-stella/stella-boleto/src/main/java/br/com/caelum/stella/boleto/bancos/BancoDoBrasil.java" beforeDir="false" afterPath="$PROJECT_DIR$/caelum-stella/stella-boleto/src/main/java/br/com/caelum/stella/boleto/bancos/BancoDoBrasil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caelum-stella/stella-boleto/src/main/java/br/com/caelum/stella/boleto/bancos/Bradesco.java" beforeDir="false" afterPath="$PROJECT_DIR$/caelum-stella/stella-boleto/src/main/java/br/com/caelum/stella/boleto/bancos/Bradesco.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caelum-stella/stella-boleto/src/main/java/br/com/caelum/stella/boleto/bancos/Caixa.java" beforeDir="false" afterPath="$PROJECT_DIR$/caelum-stella/stella-boleto/src/main/java/br/com/caelum/stella/boleto/bancos/Caixa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caelum-stella/stella-boleto/src/main/java/br/com/caelum/stella/boleto/bancos/GeradorDeLinhaDigitavel.java" beforeDir="false" afterPath="$PROJECT_DIR$/caelum-stella/stella-boleto/src/main/java/br/com/caelum/stella/boleto/bancos/GeradorDeLinhaDigitavel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caelum-stella/stella-boleto/src/main/java/br/com/caelum/stella/boleto/bancos/HSBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/caelum-stella/stella-boleto/src/main/java/br/com/caelum/stella/boleto/bancos/HSBC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caelum-stella/stella-boleto/src/main/java/br/com/caelum/stella/boleto/bancos/Itau.java" beforeDir="false" afterPath="$PROJECT_DIR$/caelum-stella/stella-boleto/src/main/java/br/com/caelum/stella/boleto/bancos/Itau.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caelum-stella/stella-boleto/src/main/java/br/com/caelum/stella/boleto/bancos/Santander.java" beforeDir="false" afterPath="$PROJECT_DIR$/caelum-stella/stella-boleto/src/main/java/br/com/caelum/stella/boleto/bancos/Santander.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caelum-stella/stella-boleto/src/main/resources/br/com/caelum/stella/boleto/img/corte.png" beforeDir="false" afterPath="$PROJECT_DIR$/caelum-stella/stella-boleto/src/main/resources/br/com/caelum/stella/boleto/img/corte.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caelum-stella/stella-boleto/src/main/resources/br/com/caelum/stella/boleto/img/template.png" beforeDir="false" afterPath="$PROJECT_DIR$/caelum-stella/stella-boleto/src/main/resources/br/com/caelum/stella/boleto/img/template.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caelum-stella/stella-boleto/src/test/java/br/com/caelum/stella/boleto/bancos/BradescoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/caelum-stella/stella-boleto/src/test/java/br/com/caelum/stella/boleto/bancos/BradescoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caelum-stella/stella-distribution/src/main/site/resources/scripts/mootools-beta-1.2b2.js" beforeDir="false" afterPath="$PROJECT_DIR$/caelum-stella/stella-distribution/src/main/site/resources/scripts/mootools-beta-1.2b2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caelum-stella/stella-distribution/src/main/site/resources/scripts/shBrushJScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/caelum-stella/stella-distribution/src/main/site/resources/scripts/shBrushJScript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caelum-stella/stella-distribution/src/main/site/resources/style/SyntaxHighlighter.css" beforeDir="false" afterPath="$PROJECT_DIR$/caelum-stella/stella-distribution/src/main/site/resources/style/SyntaxHighlighter.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caelum-stella/stella-js/script/destroy" beforeDir="false" afterPath="$PROJECT_DIR$/caelum-stella/stella-js/script/destroy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caelum-stella/stella-js/script/generate" beforeDir="false" afterPath="$PROJECT_DIR$/caelum-stella/stella-js/script/generate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caelum-stella/stella-js/script/js_autotest" beforeDir="false" afterPath="$PROJECT_DIR$/caelum-stella/stella-js/script/js_autotest" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caelum-stella/stella-js/script/rstakeout" beforeDir="false" afterPath="$PROJECT_DIR$/caelum-stella/stella-js/script/rstakeout" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/desktop-tutorial" beforeDir="false" afterPath="$PROJECT_DIR$/desktop-tutorial" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/desktop-tutorial/desafio logica/desafio calculadore.js" beforeDir="false" afterPath="$PROJECT_DIR$/desktop-tutorial/desafio logica/desafio calculadore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firebird" beforeDir="false" afterPath="$PROJECT_DIR$/firebird" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firebird/extern/boost/boost/mpl/aux_/preprocessed/bcc551/greater_equal.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/firebird/extern/boost/boost/mpl/aux_/preprocessed/bcc551/greater_equal.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firebird/extern/boost/boost/mpl/aux_/preprocessed/bcc551/inherit.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/firebird/extern/boost/boost/mpl/aux_/preprocessed/bcc551/inherit.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firebird/vcpkg" beforeDir="false" afterPath="$PROJECT_DIR$/firebird/vcpkg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firebird/vcpkg/ports/python2/003-build-msvc.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/indexold.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sped-gnre" beforeDir="false" afterPath="$PROJECT_DIR$/sped-gnre" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sped-gnre/exemplos/guia.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/sped-gnre/exemplos/guia.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/teste" beforeDir="false" afterPath="$PROJECT_DIR$/teste" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/teste" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2tzohmXi2rZlTXu6hTLY65ISfsZ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.teste.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-PY-243.25659.43" />
+        <option value="bundled-python-sdk-181015f7ab06-4df51de95216-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.25659.43" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6bb3b9e1-daae-4f0e-b3b9-f1fde903008b" name="Changes" comment="" />
+      <created>1741364400743</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1741364400743</updated>
+      <workItem from="1741364406498" duration="332000" />
+      <workItem from="1741364956242" duration="117000" />
+      <workItem from="1741615454791" duration="208000" />
+      <workItem from="1741615801163" duration="309000" />
+    </task>
+    <servers />
+  </component>
+</project>
