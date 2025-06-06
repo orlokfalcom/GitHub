@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prototipo nao funcional com videos importados de outras plataformas referenciados</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom CSS for accessibility features */
+        .high-contrast {
+            background-color: #000 !important;
+            color: #FFF !important;
+        }
+        .high-contrast * {
+            background-color: #000 !important;
+            color: #FFF !important;
+            border-color: #FFF !important;
+        }
+        .dyslexic-font {
+            font-family: 'Comic Sans MS', 'Arial Rounded MT Bold', sans-serif;
+            letter-spacing: 0.1em;
+            line-height: 1.8;
+        }
+        .text-to-speech-active {
+            border: 3px solid #3B82F6;
+        }
+        .symbol-button {
+            padding: 12px;
+            border-radius: 50%;
+            margin: 0 5px;
+            transition: all 0.3s;
+        }
+        .symbol-button:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans transition-all duration-300">
+    <!-- Accessibility Toolbar (fixed at top) -->
+    <div class="fixed top-0 left-0 right-0 bg-blue-600 text-white p-2 z-50 shadow-lg">
+        <div class="container mx-auto flex flex-wrap items-center justify-between">
+            <h2 class="text-lg font-bold">Recursos de Acessibilidade</h2>
+            <div class="flex flex-wrap items-center space-x-2">
+                <button id="contrastBtn" class="bg-white text-blue-600 px-3 py-1 rounded flex items-center">
+                    <i class="fas fa-adjust mr-2"></i> Alto Contraste
+                </button>
+                <button id="textSizeBtn" class="bg-white text-blue-600 px-3 py-1 rounded flex items-center">
+                    <i class="fas fa-text-height mr-2"></i> Aumentar Texto
+                </button>
+                <button id="dyslexicBtn" class="bg-white text-blue-600 px-3 py-1 rounded flex items-center">
+                    <i class="fas fa-font mr-2"></i> Fonte para Dislexia
+                </button>
+                <button id="speechBtn" class="bg-white text-blue-600 px-3 py-1 rounded flex items-center">
+                    <i class="fas fa-volume-up mr-2"></i> Ler Conteúdo
+                </button>
+                <button id="symbolBtn" class="bg-white text-blue-600 px-3 py-1 rounded flex items-center">
+                    <i class="fas fa-icons mr-2"></i> Símbolos
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content (pushed down by fixed toolbar) -->
+    <div class="pt-16">
+        <!-- Header with sign language video -->
+        <header class="bg-gradient-to-r from-blue-700 to-blue-500 text-white py-10">
+            <div class="container mx-auto px-4 flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-8 lg:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Portal Educacional Inclusivo</h1>
+                    <p class="text-xl mb-6">Aprendizado para todos, sem barreiras.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#cursos" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-bold hover:bg-blue-100 transition">
+                            Explorar Cursos
+                        </a>
+                        <a href="#recursos" class="border-2 border-white text-white px-6 py-3 rounded-lg font-bold hover:bg-white hover:text-blue-600 transition">
+                            Conhecer Recursos
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 space-y-4">
+                    <div class="w-full bg-black rounded-lg overflow-hidden relative aspect-video">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/bTOw56aMspU?si=1A0B6pBgKXjXkeYM"  title="Síndrome de Down e Educação" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <div class="absolute bottom-0 left-0 right-0 bg-blue-800 bg-opacity-75 text-white p-2 text-center">
+                            <i class="fas fa-child mr-2"></i> Educação para Síndrome de Down agradecimento a @tvalese
+
+                        </div>
+                    </div>
+                    <div class="w-full bg-black rounded-lg overflow-hidden relative aspect-video">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/5GjoQq0QBfA?si=x5wtWA-nZiEc01Dp" title="Autismo e Aprendizado" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <div class="absolute bottom-0 left-0 right-0 bg-purple-800 bg-opacity-75 text-white p-2 text-center">
+                            <i class="fas fa-brain mr-2"></i> Estratégias para Autismo agradecimentos a @mayragaiato
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main sections -->
+        <main class="container mx-auto px-4 py-12">
+            <!-- Cards section with symbol support -->
+            <section id="cursos" class="mb-20">
+                <h2 class="text-3xl font-bold text-center mb-12 text-gray-800 relative">
+                    <span class="border-b-4 border-blue-500 pb-2">Nossos Cursos Inclusivos</span>
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Course 1 - Visual -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition relative" data-symbol="👁️">
+                        <div class="h-48 bg-gradient-to-r from-purple-500 to-blue-500 flex items-center justify-center">
+                            <i class="fas fa-eye text-white text-6xl" aria-hidden="true"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Aprendizado Visual</h3>
+                            <p class="text-gray-600 mb-4">Cursos com ênfase em recursos visuais, ideais para alunos com deficiência auditiva.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Vídeos</span>
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Imagens</span>
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Infográficos</span>
+                            </div>
+                            <button class="w-full bg-blue-600 text-white py-2 rounded-lg font-medium hover:bg-blue-700 transition flex items-center justify-center">
+                                <span class="symbol-placeholder mr-2"></span>
+                                Acessar Curso
+                            </button>
+                        </div>
+                        <div class="absolute top-4 right-4 symbol-button bg-blue-100 text-blue-800 hidden">
+                            👁️
+                        </div>
+                    </div>
+
+                    <!-- Course 2 - Audio -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition relative" data-symbol="🔊">
+                        <div class="h-48 bg-gradient-to-r from-green-500 to-teal-500 flex items-center justify-center">
+                            <i class="fas fa-volume-up text-white text-6xl" aria-hidden="true"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Aprendizado Auditivo</h3>
+                            <p class="text-gray-600 mb-4">Cursos com narração detalhada, perfeitos para alunos com deficiência visual.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Áudio-descrição</span>
+                                <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Podcasts</span>
+                                <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Narração</span>
+                            </div>
+                            <button class="w-full bg-green-600 text-white py-2 rounded-lg font-medium hover:bg-green-700 transition flex items-center justify-center">
+                                <span class="symbol-placeholder mr-2"></span>
+                                Acessar Curso
+                            </button>
+                        </div>
+                        <div class="absolute top-4 right-4 symbol-button bg-green-100 text-green-800 hidden">
+                            🔊
+                        </div>
+                    </div>
+
+                    <!-- Course 3 - Multisensory -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition relative" data-symbol="🖐️">
+                        <div class="h-48 bg-gradient-to-r from-orange-500 to-yellow-500 flex items-center justify-center">
+                            <i class="fas fa-hands text-white text-6xl" aria-hidden="true"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Aprendizado Multissensorial</h3>
+                            <p class="text-gray-600 mb-4">Cursos que combinam vários estímulos, excelentes para alunos com Síndrome de Down e autismo.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Toque</span>
+                                <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Movimento</span>
+                                <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Cor</span>
+                            </div>
+                            <button class="w-full bg-orange-600 text-white py-2 rounded-lg font-medium hover:bg-orange-700 transition flex items-center justify-center">
+                                <span class="symbol-placeholder mr-2"></span>
+                                Acessar Curso
+                            </button>
+                        </div>
+                        <div class="absolute top-4 right-4 symbol-button bg-orange-100 text-orange-800 hidden">
+                            🖐️
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Resources section -->
+            <section id="recursos" class="mb-20">
+                <h2 class="text-3xl font-bold text-center mb-12 text-gray-800 relative">
+                    <span class="border-b-4 border-blue-500 pb-2">Recursos de Acessibilidade</span>
+                </h2>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div class="order-2 lg:order-1">
+                        <div class="bg-white p-6 rounded-xl shadow-md mb-6">
+                            <div class="flex items-start mb-4">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-eye text-blue-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-800 mb-1">Para Deficientes Visuais</h3>
+                                    <p class="text-gray-600">Leitor de tela compatível, alto contraste, aumento de fonte e descrição de imagens.</p>
+                                </div>
+                            </div>
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition flex items-center" id="screenReaderBtn">
+                                <i class="fas fa-assistive-listening-systems mr-2"></i> Ativar Leitor de Tela
+                            </button>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-xl shadow-md mb-6">
+                            <div class="flex items-start mb-4">
+                                <div class="bg-purple-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-sign-language text-purple-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-800 mb-1">Para Deficientes Auditivos</h3>
+                                    <p class="text-gray-600">Vídeos com legenda, conteúdo em LIBRAS e opção de visualização do conteúdo em texto.</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <button class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition flex items-center">
+                                    <i class="fas fa-closed-captioning mr-2"></i> Ativar Legendas
+                                </button>
+                                <button class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition flex items-center">
+                                    <i class="fas fa-sign-language mr-2"></i> LIBRAS
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-xl shadow-md">
+                            <div class="flex items-start mb-4">
+                                <div class="bg-green-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-brain text-green-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-800 mb-1">Para Necessidades Cognitivas</h3>
+                                    <p class="text-gray-600">Fonte especial para dislexia, simplificação de texto, símbolos PECS e organização visual clara.</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <button class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition flex items-center" id="simplifyTextBtn">
+                                    <i class="fas fa-text-width mr-2"></i> Simplificar Texto
+                                </button>
+                                <button class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition flex items-center">
+                                    <i class="fas fa-icons mr-2"></i> Mostrar Símbolos
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="order-1 lg:order-2 flex justify-center">
+                        <div class="relative max-w-md w-full">
+                            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGVkdWNhdGlvbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="Crianças aprendendo juntas" class="rounded-xl shadow-lg w-full">
+                            <div class="absolute -bottom-4 -right-4 bg-yellow-400 text-yellow-900 p-4 rounded-xl shadow-lg">
+                                <i class="fas fa-universal-access text-4xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Video section with accessibility -->
+            <section class="mb-20 bg-gray-100 rounded-xl p-8">
+                <div class="flex flex-col lg:flex-row items-center">
+                    <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pr-8">
+                        <h2 class="text-3xl font-bold text-gray-800 mb-4">Aula Inclusiva ao Vivo</h2>
+                        <p class="text-gray-600 mb-6">Assista nossa aula demonstrativa com todos os recursos de acessibilidade ativados. Esse conteúdo é adaptável para diferentes necessidades educacionais.</p>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                    <i class="fas fa-closed-captioning text-blue-600"></i>
+                                </div>
+                                <span class="text-gray-700">Legendas sincronizadas</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="bg-purple-100 p-2 rounded-full mr-4">
+                                    <i class="fas fa-sign-language text-purple-600"></i>
+                                </div>
+                                <span class="text-gray-700">Janela de LIBRAS integrada</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="bg-green-100 p-2 rounded-full mr-4">
+                                    <i class="fas fa-text-height text-green-600"></i>
+                                </div>
+                                <span class="text-gray-700">Controle de tamanho do texto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2 relative">
+                        <div class="bg-black rounded-lg overflow-hidden">
+                            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDMyMjk2NWJjYWI0NmY5NjU1MDcxZWYxYzMwYmMxYWQ0YzZmN2RjOSZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/Y0Djm1jvUmgwUPQUJm/giphy.gif" alt="Vídeo aula demonstrativa" class="w-full h-auto">
+                            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-3 flex items-center">
+                                <button class="bg-red-600 text-white p-2 rounded-full mr-4 hover:bg-red-700 transition">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                                <div class="flex-1">
+                                    <div class="w-full bg-gray-600 rounded-full h-2 mb-1">
+                                        <div class="bg-red-600 h-2 rounded-full" style="width: 30%"></div>
+                                    </div>
+                                    <div class="flex justify-between text-sm">
+                                        <span>0:32 / 10:15</span>
+                                        <div class="flex space-x-3">
+                                            <button class="hover:text-red-400 transition">
+                                                <i class="fas fa-closed-captioning"></i>
+                                            </button>
+                                            <button class="hover:text-red-400 transition">
+                                                <i class="fas fa-sign-language"></i>
+                                            </button>
+                                            <button class="hover:text-red-400 transition">
+                                                <i class="fas fa-volume-up"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="signLanguageWindow" class="absolute -right-4 -top-4 bg-white rounded-lg shadow-lg w-32 h-32 border-2 border-purple-400 overflow-hidden hidden">
+                            <div class="bg-purple-600 text-white p-1 text-sm text-center font-bold">Intérprete de LIBRAS</div>
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/VIDEO_ID_4" title="Intérprete de LIBRAS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials -->
+            <section class="mb-20">
+                <h2 class="text-3xl font-bold text-center mb-12 text-gray-800 relative">
+                    <span class="border-b-4 border-blue-500 pb-2">Histórias de Sucesso</span>
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Testimonial 1 - Down Syndrome -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition">
+                        <div class="flex items-center mb-4">
+                            <img src="https://images.unsplash.com/photo-1596627114211-0e9d7c43c0b1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fHNpbmRyb21lJTIwZG93biUyMGNoaWxkfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="Joana" class="w-16 h-16 rounded-full object-cover border-4 border-yellow-400">
+                            <div class="ml-4">
+                                <h3 class="font-bold text-lg">Joana</h3>
+                                <p class="text-yellow-600">Síndrome de Down</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4">"Os recursos visuais e o ritmo mais pausado das aulas me ajudaram muito a acompanhar o conteúdo. Agora consigo ler muito melhor!"</p>
+                        <div class="flex">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 - Autism -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition">
+                        <div class="flex items-center mb-4">
+                            <img src="https://images.unsplash.com/photo-1503454537195-29dc4008f0fe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXV0aXN0aWMlMjBjaGlsZHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="Miguel" class="w-16 h-16 rounded-full object-cover border-4 border-green-400">
+                            <div class="ml-4">
+                                <h3 class="font-bold text-lg">Miguel</h3>
+                                <p class="text-green-600">Autismo</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4">"A estrutura consistente e os símbolos visuais me ajudam a entender o que esperar de cada aula. Finalmente me sinto incluído!"</p>
+                        <div class="flex">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star-half-alt text-yellow-400"></i>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 - Blind -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition">
+                        <div class="flex items-center mb-4">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmxpbmQlMjBwZXJzb258ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="Carlos" class="w-16 h-16 rounded-full object-cover border-4 border-blue-400">
+                            <div class="ml-4">
+                                <h3 class="font-bold text-lg">Carlos</h3>
+                                <p class="text-blue-600">Deficiência Visual</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4">"O leitor de tela integrado e as descrições detalhadas tornaram possível para mim acessar todo o conteúdo do curso sem barreiras."</p>
+                        <div class="flex">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer with contact -->
+        <footer class="bg-gray-800 text-white py-12">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div>
+                        <h3 class="text-xl font-bold mb-4">Portal Educacional Inclusivo</h3>
+                        <p class="text-gray-400">Educação sem barreiras, conhecimento sem limites.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-4">Recursos</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Cursos</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Materiais Adaptados</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Acessibilidade</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Parcerias</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-4">Suporte</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Central de Ajuda</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Tutoriais</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">LIBRAS Online</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-4">Contato Acessível</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-phone-alt text-blue-400 mr-2"></i>
+                                <span class="text-gray-400">(11) 4002-8922</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-sms text-blue-400 mr-2"></i>
+                                <span class="text-gray-400">SMS: (11) 94002-8922</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-video text-blue-400 mr-2"></i>
+                                <span class="text-gray-400">Videoconferência</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-envelope text-blue-400 mr-2"></i>
+                                <span class="text-gray-400">contato@educacaoinclusiva.com</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                    <p>© 2023 Portal Educacional Inclusivo. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Accessibility Scripts -->
+    <script>
+        // Contrast Toggle
+        const contrastBtn = document.getElementById('contrastBtn');
+        contrastBtn.addEventListener('click', () => {
+            document.body.classList.toggle('high-contrast');
+        });
+
+        // Text Size Toggle
+        const textSizeBtn = document.getElementById('textSizeBtn');
+        let textSizeIncreased = false;
+        textSizeBtn.addEventListener('click', () => {
+            if (textSizeIncreased) {
+                document.body.style.fontSize = '';
+                textSizeBtn.innerHTML = '<i class="fas fa-text-height mr-2"></i> Aumentar Texto';
+            } else {
+                document.body.style.fontSize = '1.2em';
+                textSizeBtn.innerHTML = '<i class="fas fa-text-height mr-2"></i> Reduzir Texto';
+            }
+            textSizeIncreased = !textSizeIncreased;
+        });
+
+        // Dyslexic Font Toggle
+        const dyslexicBtn = document.getElementById('dyslexicBtn');
+        dyslexicBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dyslexic-font');
+        });
+
+        // Text to Speech
+        const speechBtn = document.getElementById('speechBtn');
+        speechBtn.addEventListener('click', () => {
+            speechBtn.classList.toggle('text-to-speech-active');
+            if (speechBtn.classList.contains('text-to-speech-active')) {
+                if ('speechSynthesis' in window) {
+                    // Get all text content from main sections
+                    const mainContent = document.querySelector('main');
+                    const text = mainContent.innerText;
+                    
+                    // Create speech synthesis
+                    const utterance = new SpeechSynthesisUtterance(text);
+                    utterance.lang = 'pt-BR';
+                    utterance.rate = 0.9;
+                    
+                    // Speak the text
+                    speechSynthesis.speak(utterance);
+                    
+                    // Change button text
+                    speechBtn.innerHTML = '<i class="fas fa-volume-up mr-2"></i> Parar Leitura';
+                } else {
+                    alert('Seu navegador não suporta a API de síntese de voz.');
+                    speechBtn.classList.remove('text-to-speech-active');
+                }
+            } else {
+                // Stop speech
+                window.speechSynthesis.cancel();
+                speechBtn.innerHTML = '<i class="fas fa-volume-up mr-2"></i> Ler Conteúdo';
+            }
+        });
+
+        // Symbols PECS - For autism and Down Syndrome
+        const symbolBtn = document.getElementById('symbolBtn');
+        symbolBtn.addEventListener('click', () => {
+            // Toggle symbol buttons on course cards
+            const symbolButtons = document.querySelectorAll('.symbol-button');
+            symbolButtons.forEach(button => {
+                button.classList.toggle('hidden');
+            });
+            
+            // Add symbols to all buttons with symbol-placeholder
+            const placeholders = document.querySelectorAll('.symbol-placeholder');
+            placeholders.forEach(placeholder => {
+                if (placeholder.textContent === '') {
+                    const card = placeholder.closest('button').parentElement.parentElement;
+                    const symbol = card.getAttribute('data-symbol');
+                    placeholder.textContent = symbol;
+                } else {
+                    placeholder.textContent = '';
+                }
+            });
+        });
+
+        // Screen Reader Simulation
+        const screenReaderBtn = document.getElementById('screenReaderBtn');
+        screenReaderBtn.addEventListener('click', () => {
+            alert('Leitor de tela ativado. Use as teclas de navegação para ouvir o conteúdo.');
+        });
+
+        // Simplify Text for cognitive disabilities
+        const simplifyTextBtn = document.getElementById('simplifyTextBtn');
+        simplifyTextBtn.addEventListener('click', () => {
+            const paragraphs = document.querySelectorAll('p');
+            paragraphs.forEach(p => {
+                if (p.textContent.includes('recursos')) {
+                    p.textContent = "Temos ferramentas para ajudar todos a aprender melhor.";
+                } else if (p.textContent.includes('cursos')) {
+                    p.textContent = "Nossas aulas são feitas para diferentes formas de aprender.";
+                }
+                // More simplifications could be added here
+            });
+            alert('Texto simplificado para melhor compreensão.');
+        });
+
+        // Show sign language window for video
+        const video = document.querySelector('#signLanguageVideo img');
+        video.addEventListener('click', () => {
+            const signWindow = document.getElementById('signLanguageWindow');
+            signWindow.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
