@@ -1,0 +1,73 @@
+body { 
+    font-family: Arial, sans-serif; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
+    background-color: #f0f0f0; 
+} 
+ 
+.container { 
+    background-color: #fff; 
+    padding: 20px; 
+    border-radius: 8px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    text-align: center; 
+} 
+ 
+#game-board { 
+    display: grid; 
+    grid-template-columns: repeat(10, 30px); /* Ajuste conforme o tamanho do seu tabuleiro */ 
+    grid-gap: 2px; 
+    margin: 20px auto; 
+} 
+ 
+.cell { 
+    width: 30px; 
+    height: 30px; 
+    border: 1px solid #ccc; 
+    text-align: center; 
+    vertical-align: middle; 
+    font-size: 16px; 
+    cursor: pointer; 
+    user-select: none; 
+} 
+ 
+.selected { 
+    background-color: yellow; 
+} 
+ 
+.found { 
+    background-color: green; 
+    color: white; 
+} 
+ 
+#word-list { 
+    margin-top: 20px; 
+} 
+ 
+#words { 
+    list-style: none; 
+    padding: 0; 
+} 
+ 
+#words li { 
+    margin: 5px 0; 
+} 
+ 
+.found-word { 
+    text-decoration: line-through; 
+    color: green; 
+} 
+#message { 
+margin-top: 20px; 
+font-weight: bold; 
+} 
+#game-board { 
+grid-template-columns: repeat(15, 25px); /* Ajuste conforme o tamanho do seu tabuleiro */ 
+} 
+.cell { 
+width: 25px; 
+height: 25px; 
+font-size: 14px; 
+}

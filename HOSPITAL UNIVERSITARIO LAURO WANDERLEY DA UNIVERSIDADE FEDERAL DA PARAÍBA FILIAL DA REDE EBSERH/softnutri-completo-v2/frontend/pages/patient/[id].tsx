@@ -1,0 +1,1 @@
+// Página de paciente atualizada com gráficos e exportação

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Django" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Electron.NET" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/GitHub" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/HexGL" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/TutsupMVC" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/caelum-stella" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/champs-da-galaxia" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/desktop-tutorial" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/firebird" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/firebird/vcpkg" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/forum" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/framework7" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/jogo-de-a-o-medieval" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/killed-by-microsoft" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/listamaravilhosaopensource" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/portfolio" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/prompt-challenger-personal-ia" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/serenata-de-amor" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/sped-gnre" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/spree" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/teste" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/the_silver_searcher" vcs="Git" />
+  </component>
+</project>
